@@ -1,9 +1,9 @@
 package com.intelifis.api.controller;
 
 
-
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +20,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
+import com.intelifis.api.controller.files.FileInfo;
+import com.intelifis.api.controller.files.FilesStorageService;
 import com.intelifis.api.model.*;
 import com.intelifis.api.repository.*;
 
@@ -28,8 +31,7 @@ import com.intelifis.api.repository.*;
 @RestController
 @RequestMapping("/arquivo")
 public class ArquivoController {
-
-	
+	  
 	@Autowired
 	private PlanoRepository planoRepository;
 	
@@ -63,6 +65,15 @@ public class ArquivoController {
 	
 	
 
+
+
+	
+
+
+
+}
+	
+	
 	
 	
 	
@@ -113,6 +124,3 @@ public class ArquivoController {
 
 
 
-
-
-}
